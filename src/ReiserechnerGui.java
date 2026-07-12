@@ -2,6 +2,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
+
 public class ReiserechnerGui extends JFrame {
 
     private JComboBox<Integer> cbAnzahlPersonen;
