@@ -8,6 +8,7 @@ public class ReiserechnerGui extends JFrame{
     private JButton btnBerechne;
     private JTextField tfGesamtpreis;
 
+
     public ReiserechnerGui() {
         setTitle("Reiserechner");
         setSize(600, 500);
