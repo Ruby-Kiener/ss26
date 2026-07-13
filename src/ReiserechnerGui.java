@@ -87,7 +87,7 @@ public class ReiserechnerGui extends JFrame {
 
             double gesamt = personen * (preis + (entfernung * 0.1));
 
-            tfGesamtpreis.setText(String.valueOf(gesamt));
+            tfGesamtpreis.setText(String.valueOf(gesamt)+" €");
 
         } catch (NumberFormatException ex) {
 
