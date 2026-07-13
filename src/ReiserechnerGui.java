@@ -23,11 +23,10 @@ public class ReiserechnerGui extends JFrame {
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        // ✅ Richtiges Layout
+
 
         setLayout(new GridLayout(5, 2, 10, 10));
 
-        // ✅ 1–10 Personen
 
         cbAnzahlPersonen = new JComboBox<>(new Integer[]{1,2,3,4,5,6,7,8,9,10});
 
@@ -55,15 +54,16 @@ public class ReiserechnerGui extends JFrame {
 
         add(tfEntfernungKilometer);
 
+        add(btnBerechne);
+
         add(new JLabel(""));
 
-        add(btnBerechne);
 
         add(new JLabel("Gesamtpreis (€):"));
 
         add(tfGesamtpreis);
 
-        // Button
+
 
         btnBerechne.addActionListener(e -> berechnePreis());
 
@@ -83,9 +83,9 @@ public class ReiserechnerGui extends JFrame {
 
             double entfernung = Double.parseDouble(tfEntfernungKilometer.getText());
 
-            // ✅ KORREKTE FORMEL AUS DER AUFGABE
 
-            double gesamt = personen * (4 * preis) + (entfernung * 0.1 * personen);
+
+            double gesamt = personen * (preis + (entfernung * 0.1));
 
             tfGesamtpreis.setText(String.valueOf(gesamt));
 
