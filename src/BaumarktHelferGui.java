@@ -29,10 +29,18 @@ public class BaumarktHelferGui extends JFrame {
         try {
             String brettlänge = comboBox1.getSelectedItem().toString();
             int anzahlRegale = Integer.parseInt(tfAnzahlRegale.getText());
-            // test
+            double LängeProBrett = 0;
+            if(brettlänge.equals("kurz (Länge=0.2m)"))
+                LängeProBrett = 0.2;
+            if(brettlänge.equals("mittel(Länge=0.4m)"))
+                LängeProBrett = 0.4;
+            if(brettlänge.equals("lang(Länge=0.8m)"))
+                LängeProBrett = 0.8;
+            double lfdMeter = anzahlRegale * LängeProBrett;
+            tfAnzahlMeter.setText("" + lfdMeter);
 
         } catch (Exception ex) {
-            //JOptionPane.showMessageDialog( this, "Bitte gültige Zahlen eingeben!");
+            JOptionPane.showMessageDialog( this, "Bitte gültige Zahlen eingeben!");
         }
     }
 
