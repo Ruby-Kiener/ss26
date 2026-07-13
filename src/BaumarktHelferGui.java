@@ -20,16 +20,19 @@ public class BaumarktHelferGui extends JFrame {
         btnBerechne.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                String brettlänge = comboBox1.getSelectedItem();
-                int anzahlRegale = Integer.parseInt(tfAnzahlRegale.getText());
-
-
-                } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(this, "Bitte gültige Zahlen eingeben!");
-                }
+                berechne();
             }
         });
+    }
+
+    public void berechne() {
+        try {
+            String brettlänge = comboBox1.getSelectedItem().toString();
+            int anzahlRegale = Integer.parseInt(tfAnzahlRegale.getText());
+
+        } catch (Exception ex) {
+            //JOptionPane.showMessageDialog( this, "Bitte gültige Zahlen eingeben!");
+        }
     }
 
     public static void main() {
