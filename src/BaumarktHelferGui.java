@@ -29,6 +29,7 @@ public class BaumarktHelferGui extends JFrame {
         try {
             String brettlänge = comboBox1.getSelectedItem().toString();
             int anzahlRegale = Integer.parseInt(tfAnzahlRegale.getText());
+            // test
 
         } catch (Exception ex) {
             //JOptionPane.showMessageDialog( this, "Bitte gültige Zahlen eingeben!");
