@@ -25,12 +25,12 @@ public class Buchung {
         return Gesamtpreis;
     }
 
-    public static void main (String[]args){
+    public static void main(String[] args) {
         Buchung buchung1 = new Buchung(5, 20, true, false);
-        Buchung buchung2 = new Buchung(5,30,false, true);
-        System.out.println("Gesamtpreis Buchung 1: "+buchung1.berechnePreis());
+        Buchung buchung2 = new Buchung(5, 30, false, true);
+        System.out.println("Gesamtpreis Buchung 1: " + buchung1.berechnePreis());
         double preis2 = buchung2.berechnePreis();
-        System.out.println("Gesamtpreis Buchung 2: "+preis2);
+        System.out.println("Gesamtpreis Buchung 2: " + preis2);
     }
 
 }
